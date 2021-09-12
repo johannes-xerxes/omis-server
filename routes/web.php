@@ -30,4 +30,14 @@ Route::post('/login', 'Web\LoginWebController@index')
 Route::view('/dashboard', 'shared.dashboard')
     ->name('dashboard');
 
+Route::view('/events', 'shared.event')
+    ->name('events');
+
+Route::view('/events/add', 'officer.add-event')
+    ->name('add-event');
+Route::post('/events/add', 'Web\AddEventWebController@index')
+    ->name('add-event');
+
+Route::view('/events/edit', 'officer.edit-event')
+    ->name('edit-event');
 
