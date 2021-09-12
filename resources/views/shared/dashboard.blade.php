@@ -8,11 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
-        <input type="email" name="email" placeholder="enter email"><br/>
-        <input type="password" name="password" placeholder="enter password"><br/>
-        <button>Login</button>
-    </form>
+    This is the dashboard
 </body>
 </html>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class CreateAccountWebController extends Controller
 {
@@ -18,7 +19,8 @@ class CreateAccountWebController extends Controller
                 $user->middle_name = $data['middle_name'];
                 $user->last_name = $data['last_name'];
                 $user->email = $data['email'];
-                $user->password = $data['password'];
+                $user->type = 'officer';
+                $user->password = Hash::make($data['password']);
                 $user->save();
             } else {
                 throw new \Exception('Wrong password');
