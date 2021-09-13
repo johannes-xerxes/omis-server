@@ -38,6 +38,9 @@ Route::view('/events/add', 'officer.add-event')
 Route::post('/events/add', 'Web\AddEventWebController@index')
     ->name('add-event');
 
-Route::view('/events/edit', 'officer.edit-event')
+Route::get('/events/edit/{id}', 'Web\EditEventWebController@index')
     ->name('edit-event');
+Route::post('/events/edit/{id}/{description}/{list_of_image?}', 'Web\EditEventWebController@update');
 
+Route::get('/events/remove/images', 'Web\RemoveEventWebController@index')
+    ->name('remove-post-photo');

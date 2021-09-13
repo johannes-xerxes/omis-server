@@ -13,7 +13,7 @@
 {{--        MAKE SURE THE LIMIT OF THE TITLE WONT GO BEYOND 200--}}
         <input type="text" name="title" placeholder="enter title" maxlength="200"/><br/>
         <input type="date" name="event_date" placeholder="enter event date"/><br/>
-        <textarea type="text" rows="20" name="description" placeholder="enter description"></textarea><br/>
+        <textarea rows="20" name="description" placeholder="enter description"></textarea><br/>
         <input type="file" multiple name="images[]"><br/>
         <button>Submit</button>
     </form>

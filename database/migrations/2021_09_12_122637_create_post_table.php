@@ -17,7 +17,7 @@ class CreatePostTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->String('title');
-            $table->timestamp('event_date');
+            $table->Date('event_date');
             $table->String('descriptions');
             $table->timestamps();
             $table->foreign('user_id')
